@@ -1,0 +1,42 @@
+{
+  "name": "@joshuaavalon/fastify-cqrs",
+  "version": "1.0.0",
+  "description": "CQRS plugin for Fastify.",
+  "main": "./lib/index.js",
+  "scripts": {
+    "lint": "eslint --ext .ts src",
+    "prebuild": "rimraf lib",
+    "build": "tsc",
+    "release": "standard-version"
+  },
+  "keywords": [
+    "cqrs",
+    "fastify"
+  ],
+  "homepage": "https://github.com/joshuaavalon/fastify-cqrs#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joshuaavalon/fastify-cqrs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/joshuaavalon/fastify-cqrs/issues"
+  },
+  "files": [
+    "lib"
+  ],
+  "author": "Joshua Avalon",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "fastify-plugin": "^3.0.0"
+  },
+  "devDependencies": {
+    "@joshuaavalon/eslint-config-typescript": "^5.0.0",
+    "@types/node": "^16.11.6",
+    "eslint": "^8.2.0",
+    "fastify": "^3.25.3",
+    "prettier": "^2.4.1",
+    "rimraf": "^3.0.2",
+    "standard-version": "^9.3.2",
+    "typescript": "^4.4.4"
+  }
+}
