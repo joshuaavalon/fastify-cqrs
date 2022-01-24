@@ -1,6 +1,6 @@
 {
   "name": "@joshuaavalon/fastify-cqrs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CQRS plugin for Fastify.",
   "main": "./lib/index.js",
   "scripts": {
