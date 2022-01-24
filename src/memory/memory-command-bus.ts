@@ -7,7 +7,7 @@ import {
 } from "../command";
 
 export class MemoryCommandBus implements CommandBus {
-  private handlers = new Map<CommandType, CommandHandler>();
+  private handlers = new Map<CommandType, CommandHandler<any>>();
   public register<T extends CommandType>(
     type: T,
     handler: CommandHandler<T>
@@ -21,15 +21,9 @@ export class MemoryCommandBus implements CommandBus {
     this.handlers.set(type, handler);
   }
 
-  public unregister<T extends CommandType>(
-    type: T,
-    handler: CommandHandler<T>
-  ): void {
+  public unregister<T extends CommandType>(type: T): void {
     if (typeof type !== "string") {
       throw new TypeError("type must be a string");
-    }
-    if (typeof handler !== "function") {
-      throw new TypeError("handler must be a function");
     }
     this.handlers.delete(type);
   }

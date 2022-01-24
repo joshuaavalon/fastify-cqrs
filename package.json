@@ -7,7 +7,8 @@
     "lint": "eslint --ext .ts src",
     "prebuild": "rimraf lib",
     "build": "tsc",
-    "release": "standard-version"
+    "release": "standard-version",
+    "test": "jest --ci --coverage"
   },
   "keywords": [
     "cqrs",
@@ -22,7 +23,8 @@
     "url": "https://github.com/joshuaavalon/fastify-cqrs/issues"
   },
   "files": [
-    "lib"
+    "lib",
+    "!lib/**/__test__"
   ],
   "author": "Joshua Avalon",
   "license": "Apache-2.0",
@@ -31,9 +33,11 @@
   },
   "devDependencies": {
     "@joshuaavalon/eslint-config-typescript": "^5.0.0",
+    "@types/jest": "^27.4.0",
     "@types/node": "^16.11.6",
     "eslint": "^8.2.0",
     "fastify": "^3.25.3",
+    "jest": "^27.4.7",
     "prettier": "^2.4.1",
     "rimraf": "^3.0.2",
     "standard-version": "^9.3.2",

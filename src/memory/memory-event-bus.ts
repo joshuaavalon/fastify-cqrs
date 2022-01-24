@@ -42,7 +42,7 @@ export class MemoryEventBus implements EventBus {
     if (typeof event.type !== "string") {
       throw new TypeError("event.type must be a string");
     }
-    this.emitter.emit(event.type, event.payload);
+    this.emitter.emit(event.type, event);
   }
 
   public publishAll<T extends EventType>(events: Event<T>[]): void {
@@ -56,7 +56,7 @@ export class MemoryEventBus implements EventBus {
       if (typeof event.type !== "string") {
         throw new TypeError("event.type must be a string");
       }
-      this.emitter.emit(event.type, event.payload);
+      this.emitter.emit(event.type, event);
     }
   }
 }

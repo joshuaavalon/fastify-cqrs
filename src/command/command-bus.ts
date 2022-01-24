@@ -8,10 +8,7 @@ export interface CommandBus {
     type: T,
     handler: CommandHandler<T>
   ): void;
-  unregister<T extends CommandType = CommandType>(
-    type: T,
-    handler: CommandHandler<T>
-  ): void;
+  unregister<T extends CommandType = CommandType>(type: T): void;
   execute<T extends CommandType = CommandType>(
     command: Command<T>
   ): Promise<CommandResult<T>>;
