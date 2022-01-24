@@ -3,6 +3,9 @@
   "version": "1.0.1",
   "description": "CQRS plugin for Fastify.",
   "main": "./lib/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "lint": "eslint --ext .ts src",
     "prebuild": "rimraf lib",
